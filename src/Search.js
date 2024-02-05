@@ -51,16 +51,16 @@ export default function Search({setAnimu, setDisplay, setToggle, toggle}) {
         <div className="h-full flex flex-col justify-between items-center">
             <div className="flex justify-center flex-col items-center w-fit mx-auto gap-2 p-2 -my-[10rem] md:-my-[5rem] text-center h-full">
                 <div className="flex flex-col justify-center items-center gap-4">
-                    <p class="text-4xl font-black">Welcome to Animu!</p>
+                    <p class="text-3xl md:text-4xl font-black">Welcome to Animu!</p>
                     <p> Search up any Anime/Manga to get their information</p>
                 </div>
-                <div className="flex flex-col w-[20rem] md:w-[40rem] rounded-md border-2">
-                    <input className={`h-9 px-4 text-xl border-0 focus:outline-none`} type="text" placeholder="naruto" onChange={(e) => handleChange(e)} onFocus={setShow}></input>
-                    <div className={`flex flex-col items-center w-full`}>
-                        <div className={`flex flex-col w-[20rem] md:w-[40rem] gap-1 absolute border-2 rounded-md w-inherit bg-white`}>
+                <div className="flex flex-col w-[80vw] sm:w-[20rem] md:w-[40rem] rounded-md border-2 text-sm md:text-md">
+                    <input className={`h-9 px-4 text-xl border-0 w-full focus:outline-none`} type="text" placeholder="naruto" onChange={(e) => handleChange(e)} onFocus={setShow}></input>
+                    <div className={`flex flex-col items-center w-inherit`}>
+                        <div className={`flex flex-col w-[80vw] sm:w-[20rem] md:w-[40rem] gap-1 absolute border-2 rounded-md bg-white`}>
                         {show && list.map((obj) => {
                                 return (
-                                    <div className="hover:border hover:font-bold group items-center w-full flex flex-row-reverse justify-between gap-1 p-1 hover:cursor-pointer px-2" key={obj.mal_id} onClick={() => handleClick(obj)}>
+                                    <div className="hover:border hover:font-bold w-inherit group items-center flex flex-row-reverse justify-between gap-1 p-1 hover:cursor-pointer px-2" key={obj.mal_id} onClick={() => handleClick(obj)}>
                                         <i class="fa-solid fa-magnifying-glass text-gray-200 group-hover:text-black"></i>
                                         <p>{obj.title}</p>
                                         <img className="hidden group-hover:block h-24" src={obj.images.jpg.image_url}></img>

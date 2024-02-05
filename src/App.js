@@ -12,7 +12,7 @@ export default function App() {
     return (
         <>
             <HashRouter>
-                <div className="flex items-center justify-evenly font-comfortaa bg-gray-900 w-full p-4">
+                <div className="flex items-center justify-evenly flex-col md:flex-row font-comfortaa bg-gray-900 w-full p-4">
                     <h1 className="text-3xl text-white font-bold">Animu</h1>
                     <Navbar setDisplay={setDisplay}/>
                 </div>
