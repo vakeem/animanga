@@ -1,1 +1,1 @@
-[DEMO]([https://www.genome.gov/](https://animanga.onrender.com/))
+[DEMO](https://animanga.onrender.com/)
